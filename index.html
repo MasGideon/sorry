@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -8,9 +9,12 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="theme-rose">
     <!-- Canvas background for floating particles -->
     <canvas id="particle-canvas"></canvas>
@@ -19,7 +23,8 @@
     <header class="app-header">
         <div class="brand">
             <span class="heart-icon">💖</span>
-            <span class="brand-title"><span id="recipient-name-display">Sweeeeeeeetyyyyyyyyyyyyyyy</span></span>
+            <span class="brand-title"><span id="recipient-name-display">Sweeeeeeeetyyyyyyyyyyyyyyy</span> <small
+                    style="opacity:0.8; font-weight:500;">(From Saaaammmmmmm)</small></span>
         </div>
         <div class="header-actions">
             <button id="sound-toggle-btn" class="icon-btn" title="Toggle Sound" aria-label="Toggle Sound">
@@ -38,14 +43,14 @@
     <main class="app-container">
         <!-- Slide Deck Card -->
         <div class="card-glass">
-            
+
             <!-- SLIDE 1 -->
             <section class="slide active" data-slide="1">
                 <div class="slide-content">
                     <div class="mascot-wrapper">
                         <img src="hii.png" alt="Waving Bear" class="mascot-img float-anim">
                     </div>
-                    <span class="slide-badge">Slide 1 of 5</span>
+                    <span class="slide-badge">Slide 1 of 5 • From Saaaammmmmmm 💖</span>
                     <h1 class="slide-title">Hey there... 🥺</h1>
                     <p class="slide-text">
                         "I'm bearly functioning knowing you're mad at me. I'm so sorry. Please forgive me?"
@@ -66,7 +71,8 @@
                     <span class="slide-badge">Slide 2 of 5</span>
                     <h2 class="slide-title">Hug it out? 🫂</h2>
                     <p class="slide-text">
-                        "Life is too quiet when we're not laughing together. I messed up, and I’m truly sorry. Hug it out?"
+                        "Life is too quiet when we're not laughing together. I messed up, and I’m truly sorry. Hug it
+                        out?"
                     </p>
                     <div class="interactive-tap-zone" id="heal-heart-btn">
                         <span class="sparkle-icon">✨</span>
@@ -87,7 +93,8 @@
                     </div>
                     <span class="slide-badge">Slide 3 of 5</span>
                     <h2 class="slide-title">Bear Hugs & Snacks 🍿</h2>
-                    <p class="slide-subtitle">"Sending a little bear hug and a huge apology. Can I make it up to you with snacks?"</p>
+                    <p class="slide-subtitle">"Sending a little bear hug and a huge apology. Can I make it up to you
+                        with snacks?"</p>
 
                     <div class="reasons-grid">
                         <div class="reason-card" tabindex="0">
@@ -150,11 +157,13 @@
             <section class="slide" data-slide="4">
                 <div class="slide-content">
                     <div class="mascot-wrapper">
-                        <img src="cute.png" alt="Cute Bear" class="mascot-img float-anim" style="width: 100px; height: 100px;">
+                        <img src="cute.png" alt="Cute Bear" class="mascot-img float-anim"
+                            style="width: 100px; height: 100px;">
                     </div>
                     <span class="slide-badge">Slide 4 of 5</span>
                     <h2 class="slide-title">I Promise To Do Better 🤙</h2>
-                    <p class="slide-subtitle">"I hate being the reason you're upset. You mean so much to me, and I promise to do better."</p>
+                    <p class="slide-subtitle">"I hate being the reason you're upset. You mean so much to me, and I
+                        promise to do better."</p>
 
                     <ul class="promises-list">
                         <li class="promise-item" tabindex="0">
@@ -232,7 +241,7 @@
             <div class="celebration-icon">🎉🥳💖</div>
             <h2 class="modal-title">YAY! THANK YOU! 🥰</h2>
             <p class="modal-message" id="victory-message">
-                You just made my whole world bright again! Get ready for warm bear hugs and all your favorite snacks! 🧸🍫
+                You just made my whole world bright again! Get ready for warm bear hugs, snacks, and all my love! 🧸🍫 — From SAM 💖
             </p>
             <div class="modal-actions">
                 <button id="replay-btn" class="btn-primary">
@@ -290,4 +299,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
