@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>I'm So Sorry... 💕</title>
+    <meta name="description" content="A cute 5-slide apology experience featuring your cute bear mascot.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-rose">
+    <!-- Canvas background for floating particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header Controls -->
+    <header class="app-header">
+        <div class="brand">
+            <span class="heart-icon">💖</span>
+            <span class="brand-title"><span id="recipient-name-display">Sweeeeeeeetyyyyyyyyyyyyyyy</span></span>
+        </div>
+        <div class="header-actions">
+            <button id="sound-toggle-btn" class="icon-btn" title="Toggle Sound" aria-label="Toggle Sound">
+                <span id="sound-icon">🔊</span>
+            </button>
+            <button id="theme-btn" class="icon-btn" title="Change Theme" aria-label="Change Theme">
+                <span>🎨</span>
+            </button>
+            <button id="edit-name-btn" class="icon-btn" title="Personalize Name" aria-label="Personalize Name">
+                <span>✏️</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="app-container">
+        <!-- Slide Deck Card -->
+        <div class="card-glass">
+            
+            <!-- SLIDE 1 -->
+            <section class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="mascot-wrapper">
+                        <img src="hii.png" alt="Waving Bear" class="mascot-img float-anim">
+                    </div>
+                    <span class="slide-badge">Slide 1 of 5</span>
+                    <h1 class="slide-title">Hey there... 🥺</h1>
+                    <p class="slide-text">
+                        "I'm bearly functioning knowing you're mad at me. I'm so sorry. Please forgive me?"
+                    </p>
+                    <button class="btn-primary next-slide-btn">
+                        <span>Tap to Continue</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SLIDE 2 -->
+            <section class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="mascot-wrapper">
+                        <img src="sad cry.png" alt="Sad Crying Bear" class="mascot-img wiggle-anim">
+                    </div>
+                    <span class="slide-badge">Slide 2 of 5</span>
+                    <h2 class="slide-title">Hug it out? 🫂</h2>
+                    <p class="slide-text">
+                        "Life is too quiet when we're not laughing together. I messed up, and I’m truly sorry. Hug it out?"
+                    </p>
+                    <div class="interactive-tap-zone" id="heal-heart-btn">
+                        <span class="sparkle-icon">✨</span>
+                        <span id="heal-text">Tap here for a giant bear hug!</span>
+                    </div>
+                    <button class="btn-primary next-slide-btn" style="margin-top: 15px;">
+                        <span>Keep Reading</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SLIDE 3 -->
+            <section class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="mascot-wrapper">
+                        <img src="yawning.png" alt="Yawning Cute Bear" class="mascot-img float-anim">
+                    </div>
+                    <span class="slide-badge">Slide 3 of 5</span>
+                    <h2 class="slide-title">Bear Hugs & Snacks 🍿</h2>
+                    <p class="slide-subtitle">"Sending a little bear hug and a huge apology. Can I make it up to you with snacks?"</p>
+
+                    <div class="reasons-grid">
+                        <div class="reason-card" tabindex="0">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <span class="reason-emoji">🍫</span>
+                                    <span>Sweet Treats</span>
+                                </div>
+                                <div class="card-back">
+                                    <p>Chocolates & ice cream to make you smile!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reason-card" tabindex="0">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <span class="reason-emoji">🧸</span>
+                                    <span>Warm Bear Hug</span>
+                                </div>
+                                <div class="card-back">
+                                    <p>The coziest hug whenever you need it!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reason-card" tabindex="0">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <span class="reason-emoji">🧋</span>
+                                    <span>Favorite Drink</span>
+                                </div>
+                                <div class="card-back">
+                                    <p>Boba or fresh coffee on me!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reason-card" tabindex="0">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <span class="reason-emoji">🍕</span>
+                                    <span>Movie & Pizza</span>
+                                </div>
+                                <div class="card-back">
+                                    <p>Your favorite show + unlimited slices!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary next-slide-btn" style="margin-top: 14px;">
+                        <span>See My Promises</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SLIDE 4 -->
+            <section class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="mascot-wrapper">
+                        <img src="cute.png" alt="Cute Bear" class="mascot-img float-anim" style="width: 100px; height: 100px;">
+                    </div>
+                    <span class="slide-badge">Slide 4 of 5</span>
+                    <h2 class="slide-title">I Promise To Do Better 🤙</h2>
+                    <p class="slide-subtitle">"I hate being the reason you're upset. You mean so much to me, and I promise to do better."</p>
+
+                    <ul class="promises-list">
+                        <li class="promise-item" tabindex="0">
+                            <div class="checkbox-custom">✓</div>
+                            <span>"Bear with me, I'm not perfect, but I'm truly trying."</span>
+                        </li>
+                        <li class="promise-item" tabindex="0">
+                            <div class="checkbox-custom">✓</div>
+                            <span>"I miss my favorite human—can I buy you a treat?"</span>
+                        </li>
+                        <li class="promise-item" tabindex="0">
+                            <div class="checkbox-custom">✓</div>
+                            <span>Listen to your feelings with patience and love</span>
+                        </li>
+                        <li class="promise-item" tabindex="0">
+                            <div class="checkbox-custom">✓</div>
+                            <span>Never leave a day without making you smile</span>
+                        </li>
+                    </ul>
+
+                    <button class="btn-primary next-slide-btn" style="margin-top: 14px;">
+                        <span>Final Question</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SLIDE 5 -->
+            <section class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="mascot-wrapper">
+                        <img src="hii.png" alt="Happy Waving Bear" class="mascot-img pulse-anim">
+                    </div>
+                    <span class="slide-badge">Slide 5 of 5</span>
+                    <h2 class="slide-title">Will You Forgive Me? 🥺💕</h2>
+                    <p class="slide-text">
+                        "Bear with me, I’m not perfect, but I'm truly sorry for what happened. Can we be happy again?"
+                    </p>
+
+                    <!-- Interactive Decision Area -->
+                    <div class="decision-container" id="decision-area">
+                        <button id="yes-btn" class="btn-success btn-pop">
+                            <span>YES! Of course 💕</span>
+                        </button>
+                        <button id="no-btn" class="btn-dodge">
+                            <span id="no-btn-text">No 😜</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Slide Navigation Controls -->
+        <div class="nav-controls">
+            <button id="prev-btn" class="nav-btn" title="Previous Slide" disabled aria-label="Previous Slide">
+                <span>←</span>
+            </button>
+            <div class="pagination-dots" id="dots-container">
+                <span class="dot active" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+                <span class="dot" data-index="5"></span>
+            </div>
+            <button id="next-btn" class="nav-btn" title="Next Slide" aria-label="Next Slide">
+                <span>→</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Celebration Modal -->
+    <div id="victory-modal" class="modal-backdrop">
+        <div class="modal-card">
+            <div class="celebration-icon">🎉🥳💖</div>
+            <h2 class="modal-title">YAY! THANK YOU! 🥰</h2>
+            <p class="modal-message" id="victory-message">
+                You just made my whole world bright again! Get ready for warm bear hugs and all your favorite snacks! 🧸🍫
+            </p>
+            <div class="modal-actions">
+                <button id="replay-btn" class="btn-primary">
+                    <span>Replay Slides 🔄</span>
+                </button>
+                <button id="close-modal-btn" class="btn-secondary">
+                    <span>Send a Hug 🤗</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Personalize Modal -->
+    <div id="edit-modal" class="modal-backdrop">
+        <div class="modal-card">
+            <h3 class="modal-title">Personalize Your Message ✏️</h3>
+            <div class="form-group">
+                <label for="name-input">Recipient's Name / Nickname:</label>
+                <input type="text" id="name-input" placeholder="e.g. Panda, Sweetheart, Alex" maxlength="25">
+            </div>
+            <div class="modal-actions">
+                <button id="save-name-btn" class="btn-primary">Save Changes</button>
+                <button id="cancel-name-btn" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Picker Dropdown Modal -->
+    <div id="theme-modal" class="modal-backdrop">
+        <div class="modal-card">
+            <h3 class="modal-title">Choose Palette 🎨</h3>
+            <div class="theme-options-grid">
+                <button class="theme-option-btn active" data-theme="theme-rose">
+                    <span class="theme-preview" style="background: linear-gradient(135deg, #FFB5A7, #FCD5CE);"></span>
+                    <span>Pastel Rose 🌸</span>
+                </button>
+                <button class="theme-option-btn" data-theme="theme-lavender">
+                    <span class="theme-preview" style="background: linear-gradient(135deg, #D8BBFF, #E7C6FF);"></span>
+                    <span>Soft Lavender 💜</span>
+                </button>
+                <button class="theme-option-btn" data-theme="theme-peach">
+                    <span class="theme-preview" style="background: linear-gradient(135deg, #FFD166, #FFB5A7);"></span>
+                    <span>Creamy Peach 🍑</span>
+                </button>
+                <button class="theme-option-btn" data-theme="theme-night">
+                    <span class="theme-preview" style="background: linear-gradient(135deg, #2B2D42, #8D99AE);"></span>
+                    <span>Starlight Night ✨</span>
+                </button>
+            </div>
+            <div class="modal-actions">
+                <button id="close-theme-btn" class="btn-secondary">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
